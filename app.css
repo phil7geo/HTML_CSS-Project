@@ -1,0 +1,1310 @@
+/*--------- TAILWIND CSS IMPORT---------*/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+/* --------------CUSTOM FONTS IMPORT--------------*/
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(./fonts/ProximaNovaRegular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(./fonts/ProximaNovaBold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Regular.ttf);
+    font-weight:normal;
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url(./fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'SourceSansPro', serif;
+}
+
+header {
+    background: url('./images/bg.png') bottom center no-repeat;
+    background-size: cover;
+    height: 750px;
+}
+
+
+                        /*-------- TOPBAR MENU-------*/
+
+#topbar {
+    height: 33px;
+    display: flex;
+}
+    .time-weather {
+        padding-top: 100px
+    }
+        #time {
+            float: left;
+        }
+
+        #weather {
+            float: right;
+            padding-left: 400px;
+        }
+            h15 {
+                font-size: 12;
+                font-weight: bold;
+                color: #FFFFFF;
+                padding-left: 30px;
+
+            }
+            h16 {
+                font-size: 26;
+                font-weight: normal;
+                color: #FFFFFF;
+                padding-left: 5px;
+            }
+            .timer {
+                display: flex;
+            }
+    
+    .login {
+        height: 24px;
+        padding: 25px 76px 12px 0px;
+        display: flex;
+    }
+        .login img {
+            margin-left: -70px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+        }
+
+    h17 {
+        font-size: 14;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+    }
+
+            /* --------------------------*/
+
+
+nav#main {
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    display: block;
+    border-radius: 100%;
+}
+
+#logo img {
+    display: block;
+}
+
+        /*-------1st container - background----------*/
+.container {
+    margin: 0 auto;
+}
+
+
+#main-menu {
+    margin: 0;
+    padding: 0 20px 0 270px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    list-style: none;
+
+    overflow: hidden;
+}
+
+#main-menu li {
+    margin: 0 15px;
+}
+
+#main-menu li img {
+    display: flex;
+  }
+
+#main-menu a {
+    color: #002868;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main-menu a:hover {
+    color: #BF0A30;
+}
+
+
+/* menu icon */
+
+  #main .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+  }
+  
+  #main .menu-icon .navicon {
+    background: #FFFFFF;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 24px;
+  }
+  
+  #main .menu-icon .navicon:before,
+  #main .menu-icon .navicon:after {
+    background: #FFFFFF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  #main .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  #main .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  #main .menu-btn {
+    display: none;
+  }
+  
+  #main .menu-btn:checked ~ #main-menu {
+    display:block;
+    background-color: #FFFFFF;
+    padding-left: 20px;
+    width: 300px;
+    height: 600px;
+    padding-top: 111px;
+    margin-top: -10px;
+  }
+
+  #main .menu-btn:checked ~ #main-menu li {
+    padding-bottom: 20px;
+  }
+
+  #main .menu-btn:checked ~ #main-menu li img {
+    padding-left: 151px;
+  }
+
+  #main .menu-btn:checked ~ #main-menu a {
+    font-size: 14;
+    display: flex;
+    padding-bottom: 15px;
+  }
+  
+  #main .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  #main .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  #main .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  #main .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  #main .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+
+/* Featured circle-1st page*/
+#featured {
+    background: url('./images/circle.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    width: 280px;
+    height: 280px;
+    margin: 70px auto 0;
+    border: 6px solid white;
+    border-radius: 100%;
+    box-shadow: 0 0 40px rgba(0, 0, 0.25);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 40px;
+}
+
+#featured svg {
+    width: 18px;
+    height: 18px;
+
+}
+
+#featured h3 {
+    margin: 4px 0 15px;
+    font-size: 12px;
+}
+
+#featured h2 {
+    margin: 0 0 16px;
+}
+
+#featured p {
+    font-size: 14px;
+    margin: 0px 18px 30px;
+    line-height: auto;
+}
+
+#featured a {
+    border-radius: 4px;
+    border: 1px solid white;
+    font-size: 14px;
+    color: #FFFFFF;
+    width: 140px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+                                        /*-----------Dropdown list item (H OΜΟΣΠΟΝΔΙΑ)--------------- */
+
+  
+  /* position of the dropdown content (div .dropdown) */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+    /* Dropdown Content unordered list (Hidden) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #FFFFFF;
+        width: 275px;
+        margin-top: -100px;
+        padding: 0px;
+    }
+
+    #main .menu-btn:checked ~ #main-menu li {
+        padding-bottom: 10px;
+    }
+
+        .dropdown-content li {
+            margin-left : -20px;
+        }
+    
+    /* extra properties at links inside the dropdown list */
+    .dropdown-content a {
+        padding: 6px 0px;
+        display: block;
+    }
+
+    /* Change color(red) of dropdown links(list items) on hover */
+    .dropdown-content a:hover {color: #BF0A30;}
+
+    /* Show the dropdown menu list on hover */ 
+    .dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+            /*-------2nd container - background (tree, ΑΠΟΓΡΑΦΗ)----------*/
+.container-2 {
+    height: 750px;
+    width: 320px; 
+    margin: 0 auto; 
+}
+
+#tree {
+    text-align: center;
+    padding: 30px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 34;
+    color: #BF0A30;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.texts {
+    margin-top: -33px;
+    height: 285px;
+}
+
+/*--text-left---*/
+.text-left {
+    width: 275px;
+    height: 285px;
+    text-align: center;
+    padding-left: 20px;
+}
+    h5 {
+        font-size: 18;
+        color: #002868;
+        margin-top: 0px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+    
+    p {
+        margin-top: -10px;
+    }
+
+    h6 {
+        font-size: 16;
+        color: #333333;
+        margin-top: 0px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+/*---text-right---*/
+.text-right {
+    width: 475px;
+    height: 235px;
+    visibility: hidden;
+}
+    h10 {
+        font-size: 18;
+        color: #002868;
+        margin-top: 0px;
+        font-weight: bold;
+        padding-left: 40px;
+    }
+
+    ul {
+        list-style:none;
+        padding-top: 35px;
+    }
+ 
+/*---date---*/
+
+.date {
+    text-align: center;
+    display: grid;
+    margin-top: 40px;
+} 
+    h7 {
+        font-size: 18;
+        color: #BF0A30;
+        font-weight: bold;
+    }
+    h8 {
+        font-size: 24;
+        color: #002868;
+        font-weight: bold;
+        padding: 5px 0px 9px 0px;
+    }
+    h9 {
+        font-size: 18;
+        color: #002868;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+
+                /*-------3rd container - background (blue, EΡΓΑ)----------*/
+
+.container-3 {
+    background: url('./images/Mask.png') bottom center no-repeat;
+    background-size: cover;
+    height: 640px;
+    width: 620px;
+}
+
+    #title {
+        text-align: center;
+        display: grid;
+        padding: 40px 70px 30px 0px;
+    }
+
+    #title svg {
+        justify-self: center;
+    }
+
+    #title h11 {
+        font-size: 12;
+        color: #FFFFFF;
+        font-weight: bold;
+        padding-top: 10px;
+        letter-spacing: 2px;
+    }
+
+
+    /*------BOX IMAGES WITH DESCRIPTIONS(TEXT)-----*/
+
+    .row {
+        display: flex;
+        text-align: center;
+        padding: 0px 0px 0px 130px;
+      }
+      
+      .column {
+        display: grid;
+        text-align: start;
+        width: 300px;
+        padding-right: 20px;
+        padding-bottom: 28px;
+      }
+
+      .column img {
+        width: 260px;
+        height: 200px;
+      }
+      .column h12 {
+        font-size: 18;
+        color: #FFFFFF;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 12px;
+      }
+      .column p {
+        font-size: 16;
+        color: #FFFFFF;
+        font-weight: normal;
+        padding-top: 12px;
+      }
+
+      .column a {
+        color:#FFFFFF;
+        text-align: start;
+        width: 150px;
+        height: 46px;
+        display: inline-flex;
+        padding-left: 0px;
+        text-decoration: none;
+        margin-top: -20px;
+      }
+         .column a h13 {
+            font-size: 14;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+
+      button {
+        width: 280px;
+        height: 50px;
+        background-color: #002868;
+        border-color: #FFFFFF;
+        margin-left: 125px;
+        cursor: pointer;
+      }
+      button h13 {
+        font-size: 14;
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+
+
+               /*-------form container----------*/           
+                        
+.container-form {
+    height: 650px;
+    width: 320px;
+    margin: 0 auto; 
+}
+.container-form form{
+    text-align: center;
+    width: 280px;
+    height: 328px;
+    margin: 0 auto;
+    padding-top: 29px;
+}
+    h14 {
+        font-size: 14;
+        color: #002868;
+        font-weight: bold;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    .form-group {
+        display: grid;
+        text-align: start;
+        padding-bottom: 15px;
+    }
+    .form-group label {
+        font-size: 12;
+        color: #333333;
+        font-weight: normal;
+        letter-spacing: -0.15px;
+    }
+        .info {
+            width: 280px;
+            height: 46px;
+            margin-top: 4px;
+        }
+
+        .msg {
+            width: 280px;
+            height: 119px;
+            margin-top: 4px;
+            margin-bottom: 48px;
+        }
+
+        #SendButton {
+            width: 130px;
+            height: 50px;
+            background-color: #BF0A30;
+            color: #FFFFFF;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+        } 
+        #SendButton:hover {
+            background-color:  #002868;
+        }
+
+
+
+            /*-------FOOTER -------*/
+            
+footer {
+background-color: #002868;
+background-size: cover; 
+}
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        padding-top: 30px;
+    }
+
+    .svg-group {
+        display: grid;
+        padding: 20px 0px 39px 145px;
+    }
+
+    .social {
+        text-align: center;
+    }
+
+
+    /*----FOOTER MENU----*/
+    #footer-menu {
+        margin: 0;
+        display: grid;
+        list-style: none;
+        padding: 30px 180px 25px 180px;
+        text-align: center;
+    }
+
+    #footer-menu li {
+        padding-bottom: 20px;
+        padding-right: 0px;
+    }
+
+        li .f {
+            text-align: center;
+        }
+    
+    #footer-menu a {
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    #footer-menu a:hover {
+        color: #BF0A30;
+    }
+
+
+    /*---FOOTER LAST PARAGRAPH---*/
+    footer p {
+        text-align: center;
+        font-size: 14;
+        font-weight: normal;
+        color: grey;
+        margin-bottom: 0px;
+    }
+
+
+
+    /*--------RED CIRCLE WITH BUTTON TO TOP AT FOOTER------*/
+    #myBtn {
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #BF0A30; /* Set a background color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        border-radius: 50%; /*for circle-button*/
+        width: 50px;    /*smaller circle*/
+        }
+        
+        #myBtn:hover {
+        background-color: red; /* Add a dark-grey background on hover */
+        }
+
+
+
+
+            /*-----RESPONSIVE DESIGN-------*/
+
+            
+@media (min-width: 640px) {
+
+  .container {
+        width: 600px;
+    }
+
+        #time {
+            float: left;
+            padding-left: 80px;
+        }
+        #weather {
+            float: initial;
+            padding-left: 400px;
+        }
+
+  .container-2 {
+        width: 600px;
+    }
+    .text-left {
+        padding-left: 170px;
+    }
+
+    .container-3 {
+        /* background: url('./images/Mask.png') bottom center no-repeat; */
+        /* background-size: cover; */
+        width: 960px;
+    }
+
+        #title {
+            padding-right: 410px;
+        }
+
+
+
+
+    .container-form {
+        width: 600px;
+    }
+
+ 
+
+                /*-------FOOTER -------*/
+            
+
+    .svg-group {
+        padding-left: 275px;
+    }
+    
+}
+
+@media (min-width: 960px) {
+  .container {
+        width: 920px;
+    }
+
+
+               /*-------- TOPBAR MENU-------*/
+
+#topbar {
+    height: 70px;
+    display: flex;
+}
+    .time-weather {
+        display: flex;
+        padding: 14px 640px 0px 172px;
+    }
+        #time {
+            padding-right: 20px;
+            width: 85px;
+            height: 44px;
+        }
+        #weather {
+            width: 99px;
+            height: 44px;
+            padding-left: 0px;
+        }
+            h15 {
+                font-size: 12;
+                font-weight: bold;
+                color: #FFFFFF;
+                padding-left: 30px;
+
+            }
+            h16 {
+                font-size: 26;
+                font-weight: normal;
+                color: #FFFFFF;
+                padding-left: 5px;
+            }
+            .timer {
+                display: flex;
+            }
+
+            .login {
+                height: 24px;
+                padding: 20px 76px 12px 0px;
+                display: flex;
+            }
+                .login img {
+                    margin-left: -300px;
+                    padding-bottom: 5px;
+                    padding-right: 5px;
+                }
+        
+        
+            h17 {
+                font-size: 14;
+                font-weight: bold;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+            }
+
+
+            /*--- ΜAIN MENU-HEADER ---*/
+
+    nav#main {
+        background: white;
+        display: block;
+        height: 60px;
+    }
+
+    #logo {
+        position: absolute;
+        border: 10px solid #A50222;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #main-menu {
+        display: flex;
+    }
+
+    #main-menu a {
+        font-size: 14px;
+        color: #002868;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+
+        float: left;
+        display: block;
+        text-align: start;
+    }
+     #main-menu li img {
+        display: none;
+      }
+
+      nav#main .menu-icon {
+        display: none;
+      }
+
+    
+
+    #featured {
+        background: url('./images/circle.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        width: 370px;
+        height: 370px;
+        margin: 70px auto 0;
+        border: 6px solid white;
+        border-radius: 100%;
+        box-shadow: 0 0 40px rgba(0, 0, 0.25);
+        text-align: center;
+        color: white;
+        padding: 40px;
+    }
+    
+    #featured h3 {
+        margin: 10px 0 30px;
+        font-size: 12px;
+    }
+    
+    #featured h2 {
+        margin: 0 0 31px;
+    }
+    
+    #featured p {
+        font-size: 16px;
+        margin: 0px 18px 35px;
+        line-height: 25px;
+    }
+    
+    #featured a {
+        border-radius: 4px;
+        border: 1px solid white;
+        font-size: 14px;
+        color: white;
+        width: 200px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    #featured svg {
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+                                            /*-----------Dropdown list item (H OΜΟΣΠΟΝΔΙΑ)--------------- */
+
+  
+  /* position of the dropdown content (div .dropdown) */
+  .dropdown {
+    position: static;
+  }
+
+    /* Dropdown Content unordered list (Hidden) */
+    .dropdown-content {
+        margin-top: 18px;
+        padding: 10px;
+    }
+
+
+
+        .dropdown-content li {
+            display: grid;
+        }
+    
+    /* extra properties at links inside the dropdown list */
+    .dropdown-content a {
+        text-align: start;
+    }
+
+    /* Change color(red) of dropdown links(list items) on hover */
+    .dropdown-content a:hover {color: #BF0A30;}
+
+    /* Show the dropdown menu list on hover */ 
+    .dropdown:hover .dropdown-content {display: block;}
+
+
+
+  .container-2 {
+        /* background: url('./images/Απογραφή.png') bottom center no-repeat;
+        background-size: cover; */
+        width: 920px;
+    }
+
+    #tree {
+        text-align: center;
+        padding: 40px;
+    }
+    
+     h4 {
+        text-align: center;
+        font-size: 48;
+        color: #BF0A30;
+        font-weight: bold;
+        line-height: 50px;
+    }
+    
+    
+    .texts {
+        display: flex; 
+        margin-top: -30px;
+    } 
+    
+    /*--text-left---*/
+     .text-left {
+        width: 464px;
+        height: 245px;
+        padding-right: 60px;
+        padding-left: 0px;
+        text-align: start;
+    }
+        h5 {
+            font-size: 18;
+            color: #002868;
+            margin-top: 0px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-top: -10px;
+        }
+    
+        h6 {
+            font-size: 16;
+            color: #333333;
+            margin-top: 0px;
+            font-weight: bold;
+        } 
+    
+    /*---text-right---*/
+     .text-right {
+        width: 475px;
+        height: 235px;
+        visibility: visible;
+    }
+        h10 {
+            font-size: 18;
+            color: #002868;
+            margin-top: 0px;
+            font-weight: bold;
+            padding-left: 40px;
+        }
+    
+        ul {
+            list-style:none;
+            padding-top: 35px;
+        }
+     
+    /*---date---*/
+    
+    .date {
+        text-align: center;
+        display: grid;
+        margin-top: 0px;
+    } 
+        h7 {
+            font-size: 18;
+            color: #BF0A30;
+            font-weight: bold;
+        }
+        h8 {
+            font-size: 34;
+            color: #002868;
+            font-weight: bold;
+            padding: 5px 0px 9px 0px;
+        }
+        h9 {
+            font-size: 18;
+            color: #002868;
+            font-weight: bold;
+        } 
+
+
+
+                        /*-------3rd container - background (blue, EΡΓΑ)----------*/
+
+.container-3 {
+    width: 1300px;
+}
+
+    #title {
+        padding-left: 300px;
+    }
+
+    #title svg {
+        justify-self: center;
+    }
+
+    #title h11 {
+        font-size: 12;
+        color: #FFFFFF;
+        font-weight: bold;
+        padding-top: 10px;
+        letter-spacing: 2px;
+    }
+
+    /*------BOX IMAGES WITH DESCRIPTIONS(TEXT)-----*/
+
+    .row {
+        padding: 0px 0px 0px 20px;
+        }
+        
+        .column {
+            width: 290px;
+            padding-right: 5px;
+            padding-left: 30px;
+        }
+
+        .column img {
+        width: 280px;
+        height: 200px;
+        }
+        .column h12 {
+        font-size: 20;
+        }
+        .column p {
+        font-size: 16;
+        color: #FFFFFF;
+        font-weight: normal;
+        padding-top: 12px;
+        }
+
+        .column a {
+        color:#FFFFFF;
+        text-align: start;
+        width: 150px;
+        height: 46px;
+        display: inline-flex;
+        padding-left: 0px;
+        text-decoration: none;
+        }
+            .column a h13 {
+            font-size: 14;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+
+        button {
+        width: 200px;
+        margin-left: 500px;
+        cursor: pointer;
+        }
+
+        button h13 {
+        font-size: 14;
+        color: #FFFFFF;
+        font-weight: bold;
+        }
+
+                /*-------- FORM-CONTAINER RESPONSIVE DESIGN--------- */
+        .container-form {
+            width: 920px;
+        }
+
+        .container-form form{
+            text-align: center;
+            width: 619px;
+            height: 526px;
+            margin: 0 auto;
+            padding-top: 66px;
+        }
+            h14 {
+                font-size: 12;
+                color: #002868;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .form-group {
+                display: grid;
+                text-align: start;
+                padding-bottom: 15px;
+            }
+            .form-group label {
+                font-size: 12;
+                color: #333333;
+                font-weight: normal;
+                letter-spacing: -0.15px;
+            }
+                .info {
+                    width: 619px;
+                    height: 46px;
+                    margin-top: 4px;
+                }
+        
+                .msg {
+                    width: 619px;
+                    height: 119px;
+                    margin-top: 4px;
+                    margin-bottom: 48px;
+                }
+        
+                #SendButton {
+                    width: 240px;
+                    height: 50px;
+                    background-color: #BF0A30;
+                    color: #FFFFFF;
+                    border: none;
+                    font-size: 14px;
+                    font-weight: bold;
+                } 
+                #SendButton:hover {
+                    background-color:  #002868;
+                }
+
+
+
+/* -----FOOTER-----*/
+footer {
+    width: 1300px;
+}
+
+    .logo {
+        text-align: initial;
+    }
+
+    .logo img {
+        padding-top: 35px;
+        padding-left: 500px;
+    }
+
+    .svg-group {
+        display: grid;
+        padding: 20px 0px 27px 460px;
+    }
+
+    .social {
+        text-align: initial;
+    }
+
+    .social img {
+        padding-left: 435px;
+    }
+
+
+    /*----FOOTER MENU----*/
+    #footer-menu {
+        display: flex;
+        padding: 30px 300px 25px 180px;
+    }
+    
+    #footer-menu a {
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+  .container {
+        width: 1240px;
+    }
+
+    .login img {
+        margin-left: -70px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+    }
+
+    #main-menu {
+        padding: 0 40px 0 300px;
+    }
+
+    #main-menu li {
+        margin: 0;
+    }
+
+    #main-menu a {
+        font-size: 14px;
+    }
+
+  
+
+
+  .container-2 {
+        background: url('./images/Απογραφή.png') bottom center no-repeat;
+        background-size: cover;
+        height: 744px;
+        width: 1519px;
+    }
+
+        /*--text-left---*/
+        .text-left {
+            padding-left: 232px;
+        }
+
+    .container-3 {
+        background: url('./images/Mask.png') bottom center no-repeat;
+        background-size: cover;
+        height: 650px;
+        width: 1519px;
+    }
+
+    #title { 
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .row {
+            display: flex;
+            text-align: center;
+            padding: 0px 0px 0px 130px;
+    }
+
+    .column {
+        display: grid;
+        text-align: start;
+        width: 300px;
+        padding-right: 20px;
+        padding-bottom: 28px;
+        padding-left: 0px;
+    }
+        .column img {
+            width: 300px;
+            height: 200px;
+        }
+        .column h12 {
+            font-size: 24;
+        }
+
+
+     button {
+        margin-left: 660px;
+     }
+
+    .container-form {
+        height: 650px; 
+        width: 1519px;
+    }
+
+    /*----FOOTER----*/
+    footer {
+        background-color: #002868;
+        background-size: cover; 
+        width: 1519px;
+        height: 430px;
+        margin-top: 37px;
+    }
+
+    .logo {
+        text-align: initial;
+    }
+
+    .logo img {
+        padding-top: 35px;
+        padding-left: 640px;
+    }
+
+    .svg-group {
+        display: grid;
+        padding: 20px 0px 27px 600px;
+    }
+
+    .social img {
+        padding-left: 570px;
+    }
+
+
+    #footer-menu {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 30px 180px 25px 180px;
+    }
+
+    #footer-menu a {
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}

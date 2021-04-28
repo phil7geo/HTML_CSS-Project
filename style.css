@@ -1,0 +1,15 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* // app.js
+import "tailwindcss/tailwind.css" */
+
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* npx tailwindcss-cli@latest build ./style.css -o ./dist/style.css */
+
+/* npx tailwindcss-cli@latest build ./app.css -o ./dist/app.css */
